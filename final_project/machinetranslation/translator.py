@@ -1,6 +1,7 @@
 #translator.py
 #import json
-import os
+"""Module providingFunction python version."""
+import os # [missing-module-docstring]
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from dotenv import load_dotenv
