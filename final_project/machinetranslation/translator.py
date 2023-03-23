@@ -9,8 +9,8 @@ load_dotenv()
 apikey = os.environ['apikey']
 url = os.environ['url']
 
-def englishToFrench(englishText):
-    #write the code here
+def englishtofrench(englishtext):
+     #write the code here
     """This class does from English to French translation"""
 
     url='https://api.us-east.assistant.watson.cloud.ibm.com/instances/605e1c2d-69b3-4744-98e8-d8a83b57cf9b'
@@ -20,16 +20,15 @@ def englishToFrench(englishText):
     language_translator = LanguageTranslatorV3(version=version,authenticator=authenticator)
     language_translator.set_service_url(url)
     lt = language_translator
-    translation = lt.translate(text=englishText, model_id="en-fr").get_result()
-    
-    if englishText == " ":
-        print("Please enter an englishText to translate.")
+    translation = lt.translate(text=englishtext, model_id="en-fr").get_result()
+    if englishtext == " ":
+        print("Please enter an englishtext to translate.")
     else:
         pass
 
     return translation['translations'][0]['translation']
 
-def frenchToEnglish(frenchText):
+def frenchtoenglish(frenchtext):
     #write the code here
     """This class does from French to English translation"""
 
@@ -40,10 +39,9 @@ def frenchToEnglish(frenchText):
     language_translator = LanguageTranslatorV3(version=version,authenticator=authenticator)
     language_translator.set_service_url(url)
     lt = language_translator
-    translation = lt.translate(text=frenchText, model_id="fr-en").get_result()
-
-    if frenchText == " ":
-        print("Please enter a frenchText to translate.")
+    translation = lt.translate(text=frenchtext, model_id="fr-en").get_result()
+    if frenchtext == " ":
+        print("Please enter a frenchtext to translate.")
     else:
         pass
 
