@@ -10,7 +10,7 @@ apikey = os.environ['apikey']
 url = os.environ['url']
 
 def englishToFrench(englishText):
-     #write the code here
+    #write the code here
     """This class does from English to French translation"""
 
     url='https://api.us-east.assistant.watson.cloud.ibm.com/instances/605e1c2d-69b3-4744-98e8-d8a83b57cf9b'
@@ -23,7 +23,7 @@ def englishToFrench(englishText):
     translation = lt.translate(text=englishText, model_id="en-fr").get_result()
     
     if englishText == " ":
-        print("Please enter a englishText to translate.")
+        print("Please enter an englishText to translate.")
     else:
         pass
 
