@@ -1,17 +1,22 @@
+"""Python version of Module providingFunction."""
 import unittest
 
-from translator import englishToFrench, frenchToEnglish
+from . translator import englishtofrench, frenchtoenglish
 
-class englishToFrenchTest(unittest.TestCase):
+class EnglishToFrenchTest(unittest.TestCase):
+    """Class representing a TestCase"""
     def test1(self):
-        self.assertEqual(englishToFrench("Hello"),"Bonjour")
-        self.assertEqual(englishToFrench("Welcome"),"Bienvenue")
-        self.assertEqual(englishToFrench("End"),"Fin")
+        """    Add the values in ``self``"""
+        self.assertEqual(englishtofrench("Hello"),"Bonjour")
+        self.assertEqual(englishtofrench("Welcome"),"Bienvenue")
+        self.assertEqual(englishtofrench("End"),"Fin")
 
-class frenchToEnglishTest(unittest.TestCase):
+class FrenchToEnglishTest(unittest.TestCase):
+    """Class representing a TestCase"""
     def test2(self):
-        self.assertEqual(frenchToEnglish("Bonjour"),"Hello")
-        self.assertEqual(frenchToEnglish("Bienvenue"),"Welcome")
-        self.assertEqual(frenchToEnglish("Fin"),"End")
+        """    Add the values in ``self``"""
+        self.assertEqual(frenchtoenglish("Bonjour"),"Hello")
+        self.assertEqual(frenchtoenglish("Bienvenue"),"Welcome")
+        self.assertEqual(frenchtoenglish("Fin"),"End")
 
 unittest.main()
