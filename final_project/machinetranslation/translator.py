@@ -1,6 +1,6 @@
 #translator.py
 #import json
-"""Module providingFunction python version."""
+"""Python version of Module providingFunction."""
 import os # [missing-module-docstring]
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -44,3 +44,4 @@ def frenchtoenglish(frenchtext):
         pass
 
     return translation['translations'][0]['translation']
+
