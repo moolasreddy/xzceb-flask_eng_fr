@@ -10,6 +10,7 @@ class EnglishToFrenchTest(unittest.TestCase):
         self.assertEqual(englishtofrench("Hello"),"Bonjour")
         self.assertEqual(englishtofrench("Welcome"),"Bienvenue")
         self.assertEqual(englishtofrench("End"),"Fin")
+        self.assertEqual(englishtofrench(""),"erreur")           
 
 class FrenchToEnglishTest(unittest.TestCase):
     """Class representing a TestCase"""
@@ -18,5 +19,6 @@ class FrenchToEnglishTest(unittest.TestCase):
         self.assertEqual(frenchtoenglish("Bonjour"),"Hello")
         self.assertEqual(frenchtoenglish("Bienvenue"),"Welcome")
         self.assertEqual(frenchtoenglish("Fin"),"End")
+        self.assertEqual(frenchtoenglish(""),"Error")            
 
 unittest.main()
