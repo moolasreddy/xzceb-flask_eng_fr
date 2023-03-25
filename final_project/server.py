@@ -8,6 +8,14 @@ app = Flask("Web Translator")
 def englishToFrench():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
+    """    Add the values in ``textToTranslate``"""
+    textToTranslate.assertEqual(textToTranslate("Hello"),"Bonjour")     
+    textToTranslate.assertEqual(textToTranslate("Welcome"),"Bienvenue")
+    textToTranslate.assertEqual(textToTranslate("Fin"),"End")
+    textToTranslate.assertNotEqual(textToTranslate("None"), '')
+    textToTranslate.assertNotEqual(textToTranslate(0), 0)
+    #textToTranslate.assertEqual(englishToFrench(""),"erreur")
+
     return textToTranslate
     #return "Translated text to French"
 
@@ -15,6 +23,13 @@ def englishToFrench():
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
     # Write your code here
+    """    Add the values in ``textToTranslate``"""    
+    textToTranslate.assertEqual(textToTranslate("Bonjour"),"Hello")     
+    textToTranslate.assertEqual(textToTranslate("Bienvenue"),"Welcome")
+    textToTranslate.assertEqual(textToTranslate("End"),"Fin")
+    textToTranslate.assertNotEqual(textToTranslate("None"), '')
+    textToTranslate.assertNotEqual(textToTranslate(0), 0)
+    #textToTranslate.assertEqual(frenchToEnglish(""),"erreur")    
     return textToTranslate
     #return "Translated text to English"
 
